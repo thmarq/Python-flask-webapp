@@ -1,0 +1,146 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .bg-4 { 
+      background-color: #0a0a0a;
+      color: #fff;
+      height: 100px;
+  }
+ 
+  header{
+     background: #7f74e0;
+     bottom: 30px;
+     color: #fff;
+     height: 116px;
+ }
+  </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <header>
+                <h1><img src="image/7.png" width="45" height="45" > ICT Academy of Kerala</h1>
+                <nav class="navbar navbar-inverse">
+                        <div class="container">
+                            <ul class="nav navbar-nav navbar-left">
+                                    <li class="active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                            <a href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                            <a href="service.html">Services</a>
+                                    </li>
+                                </ul>   
+                                <form class="navbar-form navbar-right" role="search">
+                                    <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Search">
+                                            <button type="button" class="btn btn-info">Submit</button>
+                                    </div>
+                                </form>
+                         </div>
+                    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                </nav>
+</div>
+<script>  
+        function validateform()
+        {  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value; 
+        var address=document.myform.addr.value; 
+        var passwordsec=document.myform.password2.value;
+        var agev=document.myform.ag.value;
+        var phoneno=document.myform.phn.value;
+          
+        if (name==null || name=="")
+        {  
+          alert("Name can't be blank");  
+          return false;  
+        }
+        else if(address==null || address=="")
+          {
+              alert("address cant be blank");
+              return false;
+          }
+          else if(agev==null || agev=="")
+          {
+              alert("Age cant be blank");
+              return false;
+          }
+          else if(phoneno==null || phoneno.length!==10)
+          {
+              alert("Phone no must be 10 digits");
+              return false;
+          }
+         else if(password.length<6)
+        {  
+          alert("Password must be at least 6 characters long.");  
+          return false;  
+          }  
+
+          else if(password!=passwordsec)
+          {
+              alert("password miss match");
+              return false;
+          }
+          
+    }    
+        </script>  
+        <body>  
+            <div class="container">
+            <div class="jumbotron">
+                <h2>Register here </h2><br>
+        <form name="myform" method="post" action="registersuccess.html" onsubmit="return(validateform());" >  
+        Name: <input type="text" name="name"><br/> <br>  
+        Address :  <input type="text" name="addr"><br/><br/>
+        Age      : <input type="number" name="ag"><br/> <br> 
+        Gender : <input type="radio" name="gender" value="Male">Male
+                     <input type="radio" name="gender" value="Female">Female <br/><br/> <br> 
+        Phone no : <input type="number" name="phn"><br/> <br> 
+        Password: <input type="password" name="password"><br/><br/> <br> 
+        Re-Password: <input type="password" name="password2"><br/><br/> <br> 
+        <input type="submit" value="Register" onclick=" ">  
+        </form>  
+    </div>
+    </div>
+    <div class="container-fluid">
+        <footer class="container-fluid bg-4 text-center">
+          <ul class="list-unstyled list-inline text-center">
+              <li class="list-inline-item">
+                  <a class="btn btn-floating btn-fb mx-1">
+                      <i class="fa fa-facebook"></i>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-floating btn-fb mx-1">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn btn-floating btn-fb mx-1">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>
+          </ul>
+                <h4>Copyright 2018</h4>
+                <a href="https://www.ict.org">Contact us </a>
+   
+      </footer>   
+    </div>
+</body>
+</html>
